@@ -60,8 +60,13 @@ Axios.get('https://lambda-times-api.herokuapp.com/articles')
         author.appendChild(authorStatement);
         imageContainer.appendChild(img);
 
+        card.addEventListener('click', () => {
+            console.log(headline);
+        });
+        
         headline.textContent = articleList.headline;
         img.src = articleList.authorPhoto;
         authorStatement.textContent = `by ${articleList.authorName}`;
         return card;
     }
+    
